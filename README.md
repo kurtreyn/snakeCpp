@@ -1,9 +1,13 @@
 Compile:
 
+in the root directory of the project:
+
 ```
 make
 ```
 
+Run:
+
 ```
-eval cc snake.cpp $(pkg-config --libs --cflags raylib) -o SnakeGame
+./SnakeGame
 ```
