@@ -1,2 +1,15 @@
+Note: requires raylib to be installed
+
 Compile:
-eval cc snake.cpp $(pkg-config --libs --cflags raylib) -o SnakeGame
+
+in the root directory of the project:
+
+```
+make
+```
+
+Run:
+
+```
+./SnakeGame
+```
