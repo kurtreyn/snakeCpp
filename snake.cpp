@@ -3,6 +3,7 @@
 
 Color green = {173,204,96,255};
 Color darkGreen = {43,51,24,255};
+Color white = {255,255,255,255};
 
 int cellSize = 30;
 int cellCount = 25;
@@ -11,11 +12,26 @@ class Food {
 
     public:
         Vector2 position = {5,6};
+        Texture2D texture;
 
-        void Draw()
-        {
-            DrawRectangle(position.x*cellSize, position.y*cellSize, cellSize, cellSize, darkGreen);
-        }
+    // Constructor
+    Food()
+    {
+        Image image = LoadImage("./images/food.png");
+        texture = LoadTextureFromImage(image);
+        UnloadImage(image);
+    }
+
+    // Destructor
+    ~Food()
+    {
+        UnloadTexture(texture);
+    }
+
+    void Draw()
+    {
+        DrawTexture(texture, position.x*cellSize, position.y*cellSize, white);
+    }
 };
 
 
