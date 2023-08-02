@@ -103,6 +103,7 @@ class Food
     void Draw()
     {
         DrawTexture(texture, offset + position.x*cellSize, offset + position.y*cellSize, white);
+        // DrawRectangle(offset + position.x*cellSize, offset + position.y*cellSize, cellSize, cellSize, darkGreen);
     }
 
     Vector2 GenerateRandomCell()
